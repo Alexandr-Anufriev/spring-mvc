@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 @Service
-public class CarService {
+public class CarService implements web.service.Service {
 
-    public static List<Car> carList(int limit) {
+    @Override
+    public List<Car> getCarList(int limit) {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Car1", "Model1", 1));
         cars.add(new Car("Car2", "Model2", 2));
